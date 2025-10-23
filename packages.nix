@@ -42,4 +42,10 @@
       defaultNetwork.settings.dns_enabled = true;
     };
   };
+
+  # Aliases
+  programs.bash.shellAliases = {
+    vim = "nvim";
+  };
+
 }
