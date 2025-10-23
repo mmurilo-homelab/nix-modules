@@ -29,3 +29,11 @@ rebuild
 sudo nixos-rebuild switch --upgrade
 ```
 
+## Maintenance
+
+```bash
+nix-collect-garbage
+sudo nix-store --optimize
+```
+
+- To delete older than a specific time period: `sudo nix-collect-garbage --delete-older-than 7d`.
