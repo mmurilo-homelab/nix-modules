@@ -11,12 +11,16 @@ git clone https://github.com/mmurilo-homelab/nix-modules.git
 
 edit `configuration.nix`
 
-```bash
+```nix
+{
+...
   imports =
     [ # Include the results of the hardware scan.
       ...
       ./nix-modules/packages.nix
     ];
+...
+}
 ```
 
 rebuild
