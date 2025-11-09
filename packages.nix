@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [];
+  # imports = [];
 
   # install neovim
   programs.neovim = {
@@ -9,10 +9,10 @@
     defaultEditor = true;
   };
 
-  programs.git.enable = true;
+  #programs.git.enable = true;
 
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    gnome-tweaks
     wget
     curl
     bat

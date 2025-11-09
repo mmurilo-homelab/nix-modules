@@ -23,6 +23,10 @@ edit `configuration.nix`
 }
 ```
 
+```nix
+programs.git.enable = true;
+```
+
 rebuild
 
 ```bash
