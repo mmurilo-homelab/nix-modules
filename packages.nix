@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [];
+  # imports = [];
 
   # install neovim
   programs.neovim = {
@@ -9,22 +9,22 @@
     defaultEditor = true;
   };
 
-  programs.git.enable = true;
+  #programs.git.enable = true;
 
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    curl
     bat
     btop
-    ipfetch
-    fastfetch
-    unzip
-    dive
-    podman-tui
-    docker-compose
+    curl
     distrobox
+    dive
+    docker-compose
+    fastfetch
     ghostty
+    gnome-tweaks
+    ipfetch
+    podman-tui
+    unzip
+    wget
   ];
 
   services.flatpak.enable = true;

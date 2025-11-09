@@ -23,10 +23,20 @@ edit `configuration.nix`
 }
 ```
 
+```nix
+programs.git.enable = true;
+```
+
 rebuild
 
 ```bash
 sudo nixos-rebuild switch --upgrade
+```
+
+## Flathub
+
+```bash
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
 ## Maintenance
