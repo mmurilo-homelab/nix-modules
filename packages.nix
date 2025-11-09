@@ -12,19 +12,19 @@
   #programs.git.enable = true;
 
   environment.systemPackages = with pkgs; [
-    gnome-tweaks
-    wget
-    curl
     bat
     btop
-    ipfetch
-    fastfetch
-    unzip
-    dive
-    podman-tui
-    docker-compose
+    curl
     distrobox
+    dive
+    docker-compose
+    fastfetch
     ghostty
+    gnome-tweaks
+    ipfetch
+    podman-tui
+    unzip
+    wget
   ];
 
   services.flatpak.enable = true;

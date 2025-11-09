@@ -2,7 +2,7 @@
 
 {
   imports = [
-    "${builtins.fetchGit { url = "http://github.com/NixOS/nixos-hardware.git"; }}/common/cpu/intel/haswell"
+    "${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; }}/common/cpu/intel/haswell"
     ./wifi
     ../packages.nix
   ];
@@ -15,7 +15,6 @@
   hardware.facetimehd.enable = lib.mkDefault (config.nixpkgs.config.allowUnfree or false);
   hardware.facetimehd.withCalibration = true;
 
-
   services.mbpfan.enable = lib.mkDefault true;
   services.fstrim.enable = lib.mkDefault true;
   services.tlp.enable = lib.mkDefault (
@@ -23,7 +22,7 @@
     || !config.services.power-profiles-daemon.enable
   );
 
-    environment.variables = {
+  environment.variables = {
     GSK_RENDERER = "gl";
   };
 }
